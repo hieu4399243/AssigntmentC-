@@ -43,7 +43,7 @@
                     </TextBlock>
                     <Label Name="lbOrderDate" Content="Order Date" FontSize="16" FontWeight="Bold"/>
                     <TextBlock>
-                        <TextBox Name="txtOrderDate" HorizontalAlignment="Stretch" Margin="0 0 0 0"  Height="25"  Width="400"  
+                        <DatePicker Name="txtOrderDate" HorizontalAlignment="Stretch" Margin="0 0 0 0"  Height="25"  Width="400"  
                              Text="{Binding Path=OrderDate, Mode=OneWay, StringFormat='dd/MM/yyyy'}" DataContext="{Binding ElementName=lvOrders,Path=SelectedItem}" Background="#ffeeb8"/>
                     </TextBlock>
                     <!--<TextBox HorizontalAlignment="Left" Height="23" Margin="0,260,0,0" 
@@ -52,13 +52,13 @@
 
                     <Label Name="lbRequired" Content="Required Date" FontSize="16" FontWeight="Bold"/>
                     <TextBlock>
-                    <TextBox Background="#ffeeb8" Name="txtRequired" HorizontalAlignment="Stretch" Margin="0 0 0 0"  Height="25"  Width="400" 
+                    <DatePicker Background="#ffeeb8" Name="txtRequired" HorizontalAlignment="Stretch" Margin="0 0 0 0"  Height="25"  Width="400" 
                              Text="{Binding Path=RequiredDate, Mode=OneWay, StringFormat='dd/MM/yyyy'}" DataContext="{Binding ElementName=lvOrders,Path=SelectedItem}" />
 
                     </TextBlock>
                     <Label Name="lbShipped" Content="Shipped Date" FontSize="16" FontWeight="Bold"/>
                     <TextBlock>
-                    <TextBox Background="#ffeeb8" Name="txtShipped" Height="25" Margin="0 0 0 0" HorizontalAlignment="Stretch" Width="400" 
+                    <DatePicker Background="#ffeeb8" Name="txtShipped" Height="25" Margin="0 0 0 0" HorizontalAlignment="Stretch" Width="400" 
                              Text="{Binding Path=ShippedDate, Mode=OneWay, StringFormat='dd/MM/yyyy'}" DataContext="{Binding ElementName=lvOrders,Path=SelectedItem}" />
                     </TextBlock>
 
@@ -80,9 +80,9 @@
                         <Button x:Name="btnSearch" Margin="10" Width="80" Content="Search"  Click="btnSearch_Click" Background="#c89230"/>
                         <TextBlock Margin="20 15 0 0" HorizontalAlignment="Center">
                             <Label Name="lbStart" Content="Start"/>
-                             <TextBox Name="txtStart" Width="150" HorizontalAlignment="Stretch"></TextBox>
+                             <DatePicker x:Name="txtStart" Width="150" HorizontalAlignment="Stretch"></DatePicker>
                             <Label Name="lbEnd" Content="End"/>
-                             <TextBox Name="txtEnd" Width="150" HorizontalAlignment="Stretch"></TextBox>
+                             <DatePicker x:Name="txtEnd" Width="150" HorizontalAlignment="Stretch"></DatePicker>
                         </TextBlock>
                     </StackPanel>                </StackPanel>                <ListView  Grid.Row="3" Name="lvOrders" Width="Auto" Margin="0,0,0,0" Grid.ColumnSpan="2" Background="#ffeeb8">
                     <ListView.View>

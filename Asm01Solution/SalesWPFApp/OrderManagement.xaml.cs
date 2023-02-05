@@ -3,6 +3,7 @@ using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -100,18 +101,26 @@ namespace SalesWPFApp
 
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (txtFreight.Text.Equals("") || txtOrderDate.Text == null || txtRequired.Text.Equals("") ||
+               txtShipped.Text == null)
+                MessageBox.Show("You must fill all information");
+            else
             {
-                Order order = getOrderObject();
-                order.OrderId = 0;
-                orderRepository.addNew(order);
-                loadOrderList();
-                MessageBox.Show($"{order.Member} inserted succesfully", "Insert Order");
+                try
+                {
+                    Order order = getOrderObject();
+                    order.OrderId = 0;
+                    orderRepository.addNew(order);
+                    loadOrderList();
+                    MessageBox.Show($"{order.Member} inserted succesfully", "Insert Order");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("MemberID not exist,please choose another member id", "Insert order");
+                }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("MemberID not exist,please choose another member id", "Insert order");
-            }
+           
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -146,10 +155,16 @@ namespace SalesWPFApp
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            if (txtStart.SelectedDate == null || txtEnd.SelectedDate == null)
+                MessageBox.Show("Must choose date");
+
+            string formatDate = txtStart.SelectedDate.Value.ToString("yyyy-MM-dd");
+
+            string formatDate2 = txtEnd.SelectedDate.Value.ToString("yyyy-MM-dd");
             try
             {
                 
-                lvOrders.ItemsSource =  orderRepository.getOrderListByDate(DateTime.Parse(txtStart.Text),DateTime.Parse(txtEnd.Text));
+                lvOrders.ItemsSource =  orderRepository.getOrderListByDate(DateTime.Parse(formatDate), DateTime.Parse(formatDate2));
             }
             catch (Exception ex)
             {

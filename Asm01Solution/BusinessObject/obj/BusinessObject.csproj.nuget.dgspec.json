@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FUlearning\\PRN221\\Assigntment\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\FUlearning\\PRN221\\Assigntment-edit\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\FUlearning\\PRN221\\Assigntment\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\FUlearning\\PRN221\\Assigntment-edit\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FUlearning\\PRN221\\Assigntment\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\FUlearning\\PRN221\\Assigntment-edit\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\FUlearning\\PRN221\\Assigntment\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\FUlearning\\PRN221\\Assigntment-edit\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FUlearning\\PRN221\\Assigntment\\Asm01Solution\\BusinessObject\\obj\\",
+        "outputPath": "D:\\FUlearning\\PRN221\\Assigntment-edit\\Asm01Solution\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

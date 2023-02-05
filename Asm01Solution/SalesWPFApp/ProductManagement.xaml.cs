@@ -76,12 +76,11 @@ namespace SalesWPFApp
         }
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
-            if (txtCategoryId.Text == null || txtCategoryId.Text.Equals(""))
-                MessageBox.Show("Must fill this category input box");
-            if(txtProductName.Text == null || txtProductName.Text.Equals(""))
-                MessageBox.Show("Must fill this product name input box");
-            if (txtUnitPrice.Text == null || txtUnitPrice.Text.Equals(""))
-                MessageBox.Show("Must fill this price input box");
+            if (txtCategoryId.Text == null || txtCategoryId.Text.Equals("") || txtProductName.Text == null || txtProductName.Text.Equals("") ||
+                txtUnitPrice.Text == null || txtUnitPrice.Text.Equals(""))
+                MessageBox.Show("You must fill all information");
+
+
             else
             {
                 try
